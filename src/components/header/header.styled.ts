@@ -31,4 +31,23 @@ export const NavigationElementLink = styled.a`
             visibility: hidden;
         }
     }
+    &:hover {
+        &:after {
+            animation-name: toggle;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+    @keyframes toggle {
+        from {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        to {
+            visibility:visible;
+        }
+    }
 `
