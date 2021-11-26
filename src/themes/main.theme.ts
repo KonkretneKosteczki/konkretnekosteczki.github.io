@@ -22,5 +22,8 @@ export const MainTheme: Readonly<IBaseTheme> = {
     fonts: mainFonts,
     badge: {
         color: "red"
+    },
+    header: {
+        navigationHeight: "56px"
     }
 };

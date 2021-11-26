@@ -36,4 +36,7 @@ export interface IBaseTheme {
     breakpoints: ThemeBreakpoints;
     fonts: TThemeFonts;
     badge: {color: CSS.Property.Color};
+    header: {
+        navigationHeight: CSS.Property.Height;
+    }
 }
