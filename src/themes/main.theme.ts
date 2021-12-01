@@ -20,13 +20,13 @@ const colorsDark = {
     Dark: "#07123A"
 }
 
-const colorsLight = {
-    Dark: "#554D00",
-    FadedDark: "#807615",
-    Neutral: "#807615",
-    FadedLight: "#D4CB6A",
-    Light: "#FFF7AA",
-}
+// const colorsLight = {
+//     Dark: "#554D00",
+//     FadedDark: "#807615",
+//     Neutral: "#807615",
+//     FadedLight: "#D4CB6A",
+//     Light: "#FFF7AA",
+// }
 
 export const MainTheme: Readonly<IBaseTheme> = {
     breakpoints: {
