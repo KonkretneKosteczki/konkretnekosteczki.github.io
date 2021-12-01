@@ -36,6 +36,13 @@ export interface IBaseTheme {
     breakpoints: ThemeBreakpoints;
     fonts: TThemeFonts;
     badge: {color: CSS.Property.Color};
+    colors: {
+        Dark: CSS.Property.Color;
+        FadedDark: CSS.Property.Color;
+        Neutral: CSS.Property.Color;
+        FadedLight: CSS.Property.Color;
+        Light: CSS.Property.Color;
+    }
     header: {
         navigationHeight: CSS.Property.Height;
     }

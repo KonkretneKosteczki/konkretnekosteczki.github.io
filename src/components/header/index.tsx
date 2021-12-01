@@ -1,6 +1,7 @@
 import React from "react";
 import {Navigation, NavigationElement, NavigationElementLink} from "./header.styled";
 import Profile from "../profile";
+import { ContentContainer } from "../../app.styled";
 
 const navigation = {
     "#hello": "Hello",
@@ -14,13 +15,15 @@ const Header: React.FC = () => {
         <>
             <Profile/>
             <Navigation>
-                {Object.entries(navigation).map(([link, name]) => (
-                    <NavigationElement key={link}>
-                        <NavigationElementLink href={link}>
-                            {name}
-                        </NavigationElementLink>
-                    </NavigationElement>
-                ))}
+                <ContentContainer>
+                    {Object.entries(navigation).map(([link, name]) => (
+                        <NavigationElement key={link}>
+                            <NavigationElementLink href={link}>
+                                {name}
+                            </NavigationElementLink>
+                        </NavigationElement>
+                    ))}
+                </ContentContainer>
                 {/*<div className="menu__wrapper col-md-12 d-lg-none">*/}
                 {/*    <button type="button" className="menu__mobile-button">*/}
                 {/*        <span><i className="fa fa-bars" aria-hidden="true"></i></span>*/}

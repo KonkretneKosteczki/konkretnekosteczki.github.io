@@ -12,6 +12,22 @@ const mainFonts: TThemeFonts = {
     }
 };
 
+const colorsDark = {
+    Light: "#7A85AD",
+    FadedLight: "#515E90",
+    Neutral: "#303E73",
+    FadedDark: "#172557",
+    Dark: "#07123A"
+}
+
+const colorsLight = {
+    Dark: "#554D00",
+    FadedDark: "#807615",
+    Neutral: "#807615",
+    FadedLight: "#D4CB6A",
+    Light: "#FFF7AA",
+}
+
 export const MainTheme: Readonly<IBaseTheme> = {
     breakpoints: {
         mobile: "360px",
@@ -23,6 +39,7 @@ export const MainTheme: Readonly<IBaseTheme> = {
     badge: {
         color: "red"
     },
+    colors: colorsDark,
     header: {
         navigationHeight: "56px"
     }
