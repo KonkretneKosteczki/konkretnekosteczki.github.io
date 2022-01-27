@@ -1,26 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.5acbe073.chunk.css",
-    "main.js": "/static/js/main.3e4becde.chunk.js",
-    "main.js.map": "/static/js/main.3e4becde.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.232bb987.js",
-    "runtime-main.js.map": "/static/js/runtime-main.232bb987.js.map",
-    "static/js/2.5dc97ba4.chunk.js": "/static/js/2.5dc97ba4.chunk.js",
-    "static/js/2.5dc97ba4.chunk.js.map": "/static/js/2.5dc97ba4.chunk.js.map",
-    "static/js/3.4f4a9214.chunk.js": "/static/js/3.4f4a9214.chunk.js",
-    "static/js/3.4f4a9214.chunk.js.map": "/static/js/3.4f4a9214.chunk.js.map",
+    "main.css": "/static/css/main.6714a7c6.css",
+    "main.js": "/static/js/main.b5390c24.js",
+    "static/js/787.e27e1511.chunk.js": "/static/js/787.e27e1511.chunk.js",
+    "static/media/avatar.jpg": "/static/media/avatar.599764327154ae0c5c7a.jpg",
+    "static/media/OpenSans-SemiBold.woff2": "/static/media/OpenSans-SemiBold.e24264613d8bf484c0aa.woff2",
+    "static/media/OpenSans-Bold.woff2": "/static/media/OpenSans-Bold.b87be75f5095e2b4ffe9.woff2",
+    "static/media/OpenSans-Regular.woff2": "/static/media/OpenSans-Regular.403af3bc2c6126fb5cef.woff2",
     "index.html": "/index.html",
-    "static/css/main.5acbe073.chunk.css.map": "/static/css/main.5acbe073.chunk.css.map",
-    "static/js/2.5dc97ba4.chunk.js.LICENSE.txt": "/static/js/2.5dc97ba4.chunk.js.LICENSE.txt",
-    "static/media/OpenSans-Bold.b87be75f.woff2": "/static/media/OpenSans-Bold.b87be75f.woff2",
-    "static/media/OpenSans-Regular.403af3bc.woff2": "/static/media/OpenSans-Regular.403af3bc.woff2",
-    "static/media/OpenSans-SemiBold.e2426461.woff2": "/static/media/OpenSans-SemiBold.e2426461.woff2",
-    "static/media/avatar.59976432.jpg": "/static/media/avatar.59976432.jpg"
+    "main.6714a7c6.css.map": "/static/css/main.6714a7c6.css.map",
+    "main.b5390c24.js.map": "/static/js/main.b5390c24.js.map",
+    "787.e27e1511.chunk.js.map": "/static/js/787.e27e1511.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.232bb987.js",
-    "static/js/2.5dc97ba4.chunk.js",
-    "static/css/main.5acbe073.chunk.css",
-    "static/js/main.3e4becde.chunk.js"
+    "static/css/main.6714a7c6.css",
+    "static/js/main.b5390c24.js"
   ]
 }
