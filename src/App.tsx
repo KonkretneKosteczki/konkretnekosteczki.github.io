@@ -19,7 +19,7 @@ function App() {
                         .map((_, id) => (
                             <div key={id} data-image-placeholder={`https://picsum.photos/192/108?index=${id}`} data-image={`https://picsum.photos/1920/1080?index=${id}`}>
                                 <ContentContainer>
-                                    TEST
+                                    TEST2
                                 </ContentContainer>
                             </div>
                         ))
