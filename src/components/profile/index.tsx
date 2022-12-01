@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, {useRef} from "react";
 import avatar from "../../assets/images/avatar.jpg"
+import { motion, useScroll } from "framer-motion"
 import {
     DataField,
     DataValue,
@@ -32,30 +33,38 @@ const Profile: React.FC = () => {
 
     const {firstName, lastName, occupation, ...personData} = userData
 
+    const ref = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["end start", "start start"]
+    });
+
     return (
-        <ProfileContainer>
-            <ProfileAvatarContainer>
-                <ProfileAvatar src={avatar} alt="avatar"/>
-            </ProfileAvatarContainer>
-            <ProfileDetailsContainer>
-                <ProfileName>{firstName} {lastName}</ProfileName>
-                <ProfileOccupation>{occupation}</ProfileOccupation>
-                <dl>
-                    {Object.entries(personData).map(([dataField, dataValue]) => (
-                        <React.Fragment key={dataField}>
-                            <DataField>{dataField}:</DataField>
-                            <DataValue>{dataValue}</DataValue>
-                        </React.Fragment>
-                    ))}
-                </dl>
-                <ProfileIconsContainer>
-                    <a href={links.github}><FontAwesomeIcon icon={faGithubSquare}/></a>
-                    <a href={links.linkedin}><FontAwesomeIcon icon={faLinkedin}/></a>
-                    <a href={links.stackoverflow}><FontAwesomeIcon icon={faStackOverflow} mask={faSquare}/></a>
-                    {/*<a href="" target="_blank"><i className="fa fa-facebook-square"></i></a>*/}
-                </ProfileIconsContainer>
-            </ProfileDetailsContainer>
-        </ProfileContainer>
+        <motion.div style={{opacity: scrollYProgress}}>
+            <ProfileContainer ref={ref}>
+                <ProfileAvatarContainer>
+                    <ProfileAvatar src={avatar} alt="avatar"/>
+                </ProfileAvatarContainer>
+                <ProfileDetailsContainer>
+                    <ProfileName>{firstName} {lastName}</ProfileName>
+                    <ProfileOccupation>{occupation}</ProfileOccupation>
+                    <dl>
+                        {Object.entries(personData).map(([dataField, dataValue]) => (
+                            <React.Fragment key={dataField}>
+                                <DataField>{dataField}:</DataField>
+                                <DataValue>{dataValue}</DataValue>
+                            </React.Fragment>
+                        ))}
+                    </dl>
+                    <ProfileIconsContainer>
+                        <a href={links.github}><FontAwesomeIcon icon={faGithubSquare}/></a>
+                        <a href={links.linkedin}><FontAwesomeIcon icon={faLinkedin}/></a>
+                        <a href={links.stackoverflow}><FontAwesomeIcon icon={faStackOverflow} mask={faSquare}/></a>
+                        {/*<a href="" target="_blank"><i className="fa fa-facebook-square"></i></a>*/}
+                    </ProfileIconsContainer>
+                </ProfileDetailsContainer>
+            </ProfileContainer>
+        </motion.div>
     );
 };
 

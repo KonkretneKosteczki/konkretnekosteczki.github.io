@@ -1,4 +1,10 @@
 html, body {
     margin: 0;
     background-color: black;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

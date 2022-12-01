@@ -5,12 +5,14 @@ import "./App.css"
 import ParallaxScroller from "./components/parallax-scroller";
 import Header from "./components/header";
 import {AppContainer, ContentContainer} from "./app.styled";
+import {AnimatedCanvas} from "./components/animated-canvas/animated-canvas";
 
 function App() {
     return (
         <ThemeProvider theme={MainTheme}>
             <AppContainer>
                 <Header/>
+                <AnimatedCanvas />
                 <ParallaxScroller>
                     {new Array(10)
                         .fill(null)
