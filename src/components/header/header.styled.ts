@@ -3,6 +3,10 @@ import styled from "@emotion/styled";
 export const Navigation = styled.ul`
     top: 0;
     margin: 0;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
     flex-wrap: wrap;
     text-transform: uppercase;

@@ -5,6 +5,10 @@ export const ACanvas = styled.canvas`
     height: calc(100vh - ${({theme}) => theme.header.navigationHeight}px);
     
     top: ${({theme}) => theme.header.navigationHeight}px;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
 `;
 
