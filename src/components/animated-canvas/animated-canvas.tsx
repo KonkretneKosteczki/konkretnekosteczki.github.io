@@ -7,6 +7,7 @@ import {useTheme} from "@emotion/react";
 export const AnimatedCanvas: React.FC = () => {
     const {header: {navigationHeight}} = useTheme();
     const {total, loadedImages} = useMultipleImages(require.context('../../assets/images/d20/', false, /\.(png|jpe?g|svg)$/));
+    const defaultImage = loadedImages[0];
     const [currentlyRenderedImageIndex, setCurrentlyRenderedImageIndex] = useState<number>(-1);
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
     const canvasContainerRef = useRef(null)
@@ -18,7 +19,7 @@ export const AnimatedCanvas: React.FC = () => {
     scrollYProgress.onChange((progressPercentage) => {
         const canvas = canvasRef.current;
         const context = canvas?.getContext("2d");
-        if (!canvas || !context) return console.log("NO CONTEXT");
+        if (!canvas || !context) return;
         const imageIndex = Math.round(progressPercentage * (total - 1))
         const imageToRender = loadedImages[imageIndex];
         if (!imageToRender || imageIndex === currentlyRenderedImageIndex) return;
@@ -33,6 +34,13 @@ export const AnimatedCanvas: React.FC = () => {
         context.fillStyle = "#080404";
         context.fillRect(0, 0, canvas.width, canvas.height);
     }, [canvasRef])
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas || !defaultImage || currentlyRenderedImageIndex !== -1) return;
+        setCurrentlyRenderedImageIndex(0);
+        fitImageToCanvas(canvas, defaultImage);
+    }, [currentlyRenderedImageIndex, defaultImage]);
 
     function fitImageToCanvas(canvas: HTMLCanvasElement, image: HTMLImageElement): void {
         const context = canvas.getContext("2d");
