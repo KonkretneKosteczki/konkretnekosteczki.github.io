@@ -3,12 +3,12 @@ import pLimit from "p-limit";
 
 export function useMultipleImages(context: __WebpackModuleApi.RequireContext): {isLoading: boolean, total: number, loadedImages: Array<HTMLImageElement | void>} {
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const imagePaths = context.keys().map<string>(context).filter((_, index) => index%2);
-    const [loadedImages, setLoadedImages] = useState<Array<HTMLImageElement | void>>(new Array(imagePaths.length));
+    const [loadedImages, setLoadedImages] = useState<Array<HTMLImageElement | void>>(new Array(context.keys().length));
 
     useEffect(() => {
         const limit = pLimit(10);
         const localLoadedImages: Array<HTMLImageElement> = [];
+        const imagePaths = context.keys().map<string>(context);
         Promise.all(imagePaths.map((path, index) => limit(() => new Promise<HTMLImageElement>((res) => {
             const image = new Image();
             image.onload = () => res(image);
@@ -17,7 +17,7 @@ export function useMultipleImages(context: __WebpackModuleApi.RequireContext): {
             localLoadedImages[index] = image;
             setLoadedImages(localLoadedImages);
         })))).then(() => setIsLoading(false))
-    }, []);
+    }, [context]);
 
-    return {isLoading, total: imagePaths.length, loadedImages};
+    return {isLoading, total: context.keys().length, loadedImages};
 }
