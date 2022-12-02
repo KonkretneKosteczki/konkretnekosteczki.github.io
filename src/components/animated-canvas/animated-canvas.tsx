@@ -3,6 +3,7 @@ import {motion, useScroll} from "framer-motion";
 import {useMultipleImages} from "../../hooks/multiple-images";
 import {ACanvas, CanvasContainer} from "./animated-canvas.styled";
 import {useTheme} from "@emotion/react";
+import Sticky from "react-stickynode";
 
 export const AnimatedCanvas: React.FC = () => {
     const {header: {navigationHeight}} = useTheme();
@@ -65,8 +66,10 @@ export const AnimatedCanvas: React.FC = () => {
 
     return (
         <motion.div>
-            <CanvasContainer ref={canvasContainerRef}>
-                <ACanvas ref={canvasRef} width={window.screen.availWidth} height={window.screen.availHeight - navigationHeight}/>
+            <CanvasContainer id="container" ref={canvasContainerRef}>
+                <Sticky bottomBoundary="#container" top={navigationHeight}>
+                    <ACanvas ref={canvasRef} width={window.screen.availWidth} height={window.screen.availHeight - navigationHeight}/>
+                </Sticky>
             </CanvasContainer>
         </motion.div>
     )

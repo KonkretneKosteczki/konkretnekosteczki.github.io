@@ -1,19 +1,12 @@
 import styled from "@emotion/styled";
 
 export const Navigation = styled.ul`
-    top: 0;
     margin: 0;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: sticky;
     flex-wrap: wrap;
     text-transform: uppercase;
     padding: 16px;
     height: calc(${(props) => props.theme.header.navigationHeight}px - 32px); // excluded double padding
     background: #fff;
-    z-index: 1;
 `;
 
 export const NavigationElement = styled.li`

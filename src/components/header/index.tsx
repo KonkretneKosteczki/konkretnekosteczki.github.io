@@ -2,6 +2,7 @@ import React from "react";
 import {Navigation, NavigationElement, NavigationElementLink} from "./header.styled";
 import Profile from "../profile";
 import { ContentContainer } from "../../app.styled";
+import Sticky from "react-stickynode";
 
 const navigation = {
     "#hello": "Hello",
@@ -14,17 +15,19 @@ const Header: React.FC = () => {
     return (
         <>
             <Profile/>
-            <Navigation>
-                <ContentContainer>
-                    {Object.entries(navigation).map(([link, name]) => (
-                        <NavigationElement key={link}>
-                            <NavigationElementLink href={link}>
-                                {name}
-                            </NavigationElementLink>
-                        </NavigationElement>
-                    ))}
-                </ContentContainer>
-            </Navigation>
+            <Sticky innerZ={1}>
+                <Navigation>
+                    <ContentContainer>
+                        {Object.entries(navigation).map(([link, name]) => (
+                            <NavigationElement key={link}>
+                                <NavigationElementLink href={link}>
+                                    {name}
+                                </NavigationElementLink>
+                            </NavigationElement>
+                        ))}
+                    </ContentContainer>
+                </Navigation>
+            </Sticky>
         </>
     );
 };
