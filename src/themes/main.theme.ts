@@ -31,7 +31,7 @@ const colorsDark = {
 export const MainTheme: Readonly<IBaseTheme> = {
     breakpoints: {
         mobile: "360px",
-        tablet: "672px",
+        tablet: "600px",
         laptop: "1020px",
         desktop: "1440px"
     },

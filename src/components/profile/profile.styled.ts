@@ -9,8 +9,10 @@ export const DataField = styled.dt`
     display: block;
 `;
 
-export const DataValue = styled.dd`
-    padding-left: 100px;
+export const DataValue = styled.span`
+    @media(min-width: ${({theme}) => theme.breakpoints.tablet}){
+        padding-left: 100px;
+    }
     margin-bottom: 15px;
     margin-left: 0;
     display: block;
