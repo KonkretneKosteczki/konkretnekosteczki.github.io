@@ -44,6 +44,6 @@ export interface IBaseTheme {
         Light: CSS.Property.Color;
     }
     header: {
-        navigationHeight: CSS.Property.Height;
+        navigationHeight: number;
     }
 }

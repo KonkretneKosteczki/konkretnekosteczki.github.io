@@ -41,6 +41,6 @@ export const MainTheme: Readonly<IBaseTheme> = {
     },
     colors: colorsDark,
     header: {
-        navigationHeight: "56px"
+        navigationHeight: 56
     }
 };

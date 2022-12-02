@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 
 export const ACanvas = styled.canvas`
     width: 100vw;
-    height: calc(100vh - 56px);
+    height: calc(100vh - ${({theme}) => theme.header.navigationHeight}px);
     
-    top: 56px;
+    top: ${({theme}) => theme.header.navigationHeight}px;
     position: sticky;
 `;
 

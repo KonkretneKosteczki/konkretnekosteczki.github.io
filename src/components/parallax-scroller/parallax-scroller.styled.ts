@@ -4,7 +4,7 @@ import {IBaseTheme} from "../../themes";
 export interface IParallaxScrollerElementProps {height: string, backgroundImage: string; blur: boolean};
 
 export const ScrollerElement = styled.div`
-    height: ${(props: IParallaxScrollerElementProps & {theme: IBaseTheme}) => `calc(${props.height} - ${props.theme.header.navigationHeight})`};
+    height: ${(props: IParallaxScrollerElementProps & {theme: IBaseTheme}) => `calc(${props.height} - ${props.theme.header.navigationHeight}px)`};
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

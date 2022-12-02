@@ -24,11 +24,6 @@ const Header: React.FC = () => {
                         </NavigationElement>
                     ))}
                 </ContentContainer>
-                {/*<div className="menu__wrapper col-md-12 d-lg-none">*/}
-                {/*    <button type="button" className="menu__mobile-button">*/}
-                {/*        <span><i className="fa fa-bars" aria-hidden="true"></i></span>*/}
-                {/*    </button>*/}
-                {/*</div>*/}
             </Navigation>
         </>
     );
